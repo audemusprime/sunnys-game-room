@@ -2,9 +2,9 @@ import React from 'react';
 
 function Testimonials() {
   return (
-    <div className="page">
+    <section className="page">
       <div>Testimonials</div>
-    </div>
+    </section>
   );
 }
 
