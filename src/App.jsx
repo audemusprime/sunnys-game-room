@@ -41,7 +41,7 @@ CONTACT
 function App() {
   return (
     <>
-      <div className="min-h-screen min-w-full">
+      <div>
         <Header />
         <Landing />
         <About />

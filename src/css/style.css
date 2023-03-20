@@ -1,0 +1,20 @@
+* {
+  box-sizing: content-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header-title {
+  flex-basis: 200px;
+}
+
+.header-link {
+  flex-grow: 1;
+}
+
+.page {
+  height: 100vh;
+}

@@ -2,9 +2,9 @@ import React from 'react';
 
 function Landing() {
   return (
-    <>
-      <div className="w-full h-full">Test the landing</div>
-    </>
+    <div className="page">
+      <div>Test the landing</div>
+    </div>
   );
 }
 
