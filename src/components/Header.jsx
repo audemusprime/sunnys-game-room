@@ -10,16 +10,16 @@ function Header() {
           </span>
           <ul>
             <li>
-              <a href="#">Who we are</a>
+              <a href="#who-we-are">Who we are</a>
             </li>
             <li>
-              <a href="#">What we do</a>
+              <a href="#what-we-do">What we do</a>
             </li>
             <li>
-              <a href="#">What people said</a>
+              <a href="#what-people-said">What people said</a>
             </li>
             <li>
-              <a href="#">Get in touch</a>
+              <a href="#contact">Get in touch</a>
             </li>
           </ul>
         </nav>

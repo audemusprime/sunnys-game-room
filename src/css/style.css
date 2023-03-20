@@ -8,12 +8,24 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.header-title {
-  flex-basis: 200px;
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: fixed;
+  width: 100%;
+  top: 2em;
+  z-index: 999;
 }
 
-.header-link {
-  flex-grow: 1;
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.header-title {
+  justify-self: center;
 }
 
 .page {

@@ -3,7 +3,7 @@ import React from 'react';
 function Services() {
   return (
     <section className="page">
-      <div>Services</div>
+      <h2 id="what-we-do">What we do</h2>
     </section>
   );
 }

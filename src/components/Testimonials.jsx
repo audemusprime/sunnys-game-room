@@ -3,7 +3,7 @@ import React from 'react';
 function Testimonials() {
   return (
     <section className="page">
-      <div>Testimonials</div>
+      <h2 id="what-people-said">What people said</h2>
     </section>
   );
 }
