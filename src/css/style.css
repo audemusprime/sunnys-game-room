@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Raleway&display=swap');
+
+:root {
+  --body-background: #ebe7df;
+  --header-accent: #439989;
+  --base-color: #000a16;
+  --link-active: ;
+}
+
 * {
-  box-sizing: content-box;
+  box-sizing: border-box;
   margin: 0;
 }
 
 body {
-  background-color: white;
+  background-color: var(--body-background);
   font-family: 'Raleway', sans-serif;
+  font-size: 62.5%;
+  color: var(--base-color);
 }
 
 nav {
@@ -13,8 +24,14 @@ nav {
   grid-template-columns: 1fr 1fr;
   position: fixed;
   width: 100%;
-  top: 2em;
+  top: 2rem;
   z-index: 999;
+  font-size: 1.2rem;
+}
+
+nav a {
+  color: var(--base-color);
+  text-decoration: none;
 }
 
 nav ul {
@@ -24,47 +41,190 @@ nav ul {
   justify-content: space-evenly;
 }
 
+h1 {
+  font-family: 'Patua One', cursive;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
 .header-title {
-  justify-self: center;
+  justify-self: left;
+  padding-left: 4rem;
+  font-family: 'Patua One', cursive;
+  font-size: 1.7rem;
+  letter-spacing: 0.2rem;
 }
 
 .page {
   height: 100vh;
 }
 
+.subpage {
+  padding-top: 5rem;
+  border-top: 2px solid black;
+}
+
+/* .subpage::before {
+  content: '';
+  margin: 
+} */
+
 #landing {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.hero-image {
+#hero-image {
   background-image: url(public/assets/pooltable4.jpg);
   background-size: cover;
 }
 
-.hero-text {
+#hero-text {
   display: inherit;
   align-content: center;
-  padding-left: 3em;
+  padding-left: 2.5rem;
+  font-size: 1.3rem;
 }
 
-@media screen and (max-width: 700px) {
+#hero-title {
+  font-size: clamp(2rem, 1rem + 10vw, 4rem);
+  color: var(--header-accent);
+}
+
+#subheader {
+  font-size: clamp(1rem, 0.5rem + 5vw, 2rem);
+  margin-bottom: 2rem;
+}
+.subpage-header {
+  font-size: 1.7rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  text-decoration: underline var(--header-accent);
+  text-decoration-thickness: 4px;
+  text-underline-offset: 0.5rem;
+}
+
+.about {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto repeat(2, 1fr);
+}
+
+#about-header {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#sunny {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sunny > img {
+  border-radius: 50%;
+  border: 2px solid black;
+  align-self: center;
+}
+
+#desc-a {
+  grid-area: 2 / 2 / 3 / 3;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+#desc-b {
+  grid-area: 3 / 2 / 4 / 3;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+  font-size: 1rem;
+  text-align: right;
+}
+
+#dylan {
+  grid-area: 3 / 3 / 4 / 4;
+  background-color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#dylan > img {
+  border-radius: 50%;
+  border: 2px solid black;
+  align-self: center;
+}
+
+.footer {
+  font-size: 1rem;
+  opacity: 0.5;
+  text-align: center;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 40em) {
   #landing {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
 
-  .hero-image {
+  #hero-image {
     z-index: -1;
     grid-area: 1 / 1 / 2 / 2;
   }
 
-  .hero-text {
+  #hero-text {
     z-index: 1;
     grid-area: 1 / 1 / 2 / 2;
     justify-content: center;
     text-align: center;
     color: white;
+  }
+
+  #hero-title {
+    color: white;
+  }
+
+  .about {
+    grid-template-rows: auto repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  #about-header {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  #sunny {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  #desc-a {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  #dylan {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  #desc-b {
+    grid-area: 5 / 1 / 6 / 2;
+    text-align: left;
+    padding: 1rem;
   }
 }
