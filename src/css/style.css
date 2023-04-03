@@ -146,6 +146,12 @@ h2 {
   }
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  .fadeIn {
+    animation: none;
+  }
+}
+
 #about-header {
   grid-column: 1 / 2;
   grid-row: 1 / 2;

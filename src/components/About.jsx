@@ -7,10 +7,8 @@ function About() {
     threshold: 0.15
   };
 
-  const [
-    isIntersecting,
-    setIsIntersecting
-  ] = useState(false);
+  // prettier-ignore
+  const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
