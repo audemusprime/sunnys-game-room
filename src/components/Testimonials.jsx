@@ -2,10 +2,8 @@ import React from 'react';
 
 function Testimonials() {
   return (
-    <section className="page subpage">
-      <h2 className="subpage-header" id="what-people-said">
-        What people said
-      </h2>
+    <section className="page subpage" id="what-people-said">
+      <h2 className="subpage-header">What people said</h2>
     </section>
   );
 }
