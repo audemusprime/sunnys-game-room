@@ -15,7 +15,6 @@ function About() {
     const observer = new IntersectionObserver(([entry]) => {
       setIsIntersecting(entry.isIntersecting);
     }, options);
-    console.log(isIntersecting);
     observer.observe(ref.current);
 
     return () => observer.disconnect();

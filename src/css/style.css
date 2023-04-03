@@ -24,6 +24,10 @@ a:hover {
   cursor: pointer;
 }
 
+a:visited {
+  color: var(--base-color);
+}
+
 nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -122,6 +126,15 @@ h2 {
   text-decoration: underline var(--header-accent);
   text-decoration-thickness: 4px;
   text-underline-offset: 0.5rem;
+}
+
+svg {
+  height: 40px;
+}
+
+.arrow-header {
+  font-size: 1.2rem;
+  padding-top: 1rem;
 }
 
 .about {
