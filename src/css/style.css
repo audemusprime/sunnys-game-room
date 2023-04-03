@@ -10,6 +10,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,6 +18,10 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 62.5%;
   color: var(--base-color);
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 nav {
@@ -32,6 +37,23 @@ nav {
 nav a {
   color: var(--base-color);
   text-decoration: none;
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -0.2rem;
+  height: 3px;
+  width: 100%;
+  background-color: var(--header-accent);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 450ms ease-in-out;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
 }
 
 nav ul {
@@ -67,18 +89,13 @@ h2 {
   border-top: 2px solid black;
 }
 
-/* .subpage::before {
-  content: '';
-  margin: 
-} */
-
 #landing {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 #hero-image {
-  background-image: url(public/assets/pooltable4.jpg);
+  background-image: url(/assets/pooltable4.jpg);
   background-size: cover;
 }
 
@@ -112,6 +129,21 @@ h2 {
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto repeat(2, 1fr);
+}
+
+.fadeIn {
+  animation: 1.5s slide-in;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 #about-header {
