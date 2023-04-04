@@ -4,7 +4,7 @@
   --body-background: #ebe7df;
   --header-accent: #439989;
   --base-color: #000a16;
-  --link-active: ;
+  --subheader-color: #080b0e;
 }
 
 * {
@@ -20,12 +20,14 @@ body {
   color: var(--base-color);
 }
 
-a:hover {
-  cursor: pointer;
+a,
+a:active,
+a:visited {
+  color: var(--subheader-color);
 }
 
-a:visited {
-  color: var(--base-color);
+a:hover {
+  cursor: pointer;
 }
 
 nav {
@@ -39,7 +41,7 @@ nav {
 }
 
 nav a {
-  color: var(--base-color);
+  color: var(--subheader-color);
   text-decoration: none;
   position: relative;
 }
@@ -119,13 +121,16 @@ h2 {
   font-size: clamp(1rem, 0.5rem + 5vw, 2rem);
   margin-bottom: 2rem;
 }
+
 .subpage-header {
   font-size: 1.7rem;
-  padding-top: 2rem;
-  padding-left: 2rem;
-  text-decoration: underline var(--header-accent);
-  text-decoration-thickness: 4px;
-  text-underline-offset: 0.5rem;
+  color: var(--subheader-color);
+  margin-top: 2rem;
+  margin-left: 2rem;
+  text-decoration: solid underline var(--header-accent) 0.3rem;
+  text-underline-offset: -0.28rem;
+  text-decoration-skip-ink: none;
+  display: inline;
 }
 
 svg {
@@ -135,6 +140,11 @@ svg {
 .arrow-header {
   font-size: 1.2rem;
   padding-top: 1rem;
+  padding-bottom: 0.3rem;
+  color: var(--header-accent);
+  text-decoration: solid underline var(--base-color) 2px;
+  text-underline-offset: 0.1rem;
+  text-decoration-skip-ink: none;
 }
 
 .about {
