@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../css/style.css';
+import Arrow from './Arrow';
 
 function About() {
   const options = {
@@ -24,6 +25,9 @@ function About() {
     if (isIntersecting) {
       ref.current.classList.add('fadeIn');
     }
+    // else {
+    //   ref.current.classList.add('fadeDown');
+    // }
   }, [isIntersecting]);
 
   return (
@@ -42,6 +46,9 @@ function About() {
         <div id="desc-b">
           Words about Dylan. Words about Dylan. Words about Dylan. Words about Dylan. Words about Dylan. Words about
           Dylan. Words about Dylan. Words about Dylan.
+          <div id="arrow">
+            <Arrow link="#what-we-do">What We Do</Arrow>
+          </div>
         </div>
         <div id="dylan">
           <img src="https://picsum.photos/250" alt="" />
