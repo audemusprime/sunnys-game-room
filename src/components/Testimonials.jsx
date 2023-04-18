@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import reviews from '../data/reviews';
+import tables from '../data/tables';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import '../css/style.css';
+import Arrow from './Arrow';
 
 function Testimonials() {
   const options = {
@@ -28,6 +30,12 @@ function Testimonials() {
       ref.current.classList.add('fadeIn');
     }
   }, [isIntersecting]);
+
+  const tableImages = tables.map((table) => (
+    <div key={table.alt}>
+      <img src={table.image} alt={table.alt} />
+    </div>
+  ));
 
   const reviewData = reviews.map((review) => (
     <div key={review.name}>
@@ -55,7 +63,31 @@ function Testimonials() {
       <div>
         <h2 className="subpage-header">What people said</h2>
       </div>
-      <div className="image-carousel">testing out this area</div>
+      <div className="image-carousel">
+        <Carousel
+          autoPlay={true}
+          infiniteLoop={true}
+          interval={5000}
+          // showArrows={false}
+          showThumbs={false}
+          showStatus={false}
+          renderArrowPrev={(onClickHandler, hasPrev) =>
+            hasPrev && (
+              <button onClick={onClickHandler} style={{ ...arrowStyles, left: -0.2 }}>
+                ◀︎
+              </button>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext) =>
+            hasNext && (
+              <button onClick={onClickHandler} style={{ ...arrowStyles, right: -0.2 }}>
+                ▶︎
+              </button>
+            )
+          }>
+          {tableImages}
+        </Carousel>
+      </div>
       <div className="review-carousel">
         <h2 id="contact-header">Reviews</h2>
         <Carousel
@@ -72,8 +104,8 @@ function Testimonials() {
               </button>
             )
           }
-          renderArrowNext={(onClickHandler, hasPrev) =>
-            hasPrev && (
+          renderArrowNext={(onClickHandler, hasNext) =>
+            hasNext && (
               <button onClick={onClickHandler} style={{ ...arrowStyles, right: 5 }}>
                 ▶︎
               </button>
@@ -81,6 +113,9 @@ function Testimonials() {
           }>
           {reviewData}
         </Carousel>
+      </div>
+      <div id="arrow">
+        <Arrow link="#contact">Get in touch</Arrow>
       </div>
     </section>
   );
