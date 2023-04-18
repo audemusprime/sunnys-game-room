@@ -37,7 +37,7 @@ function About() {
           <h2 className="subpage-header">Who we are</h2>
         </div>
         <div id="sunny">
-          <img src="https://picsum.photos/250" alt="" />
+          <img src="https://picsum.photos/300" alt="" />
         </div>
         <div id="desc-a">
           Words about Sunny. Words about Sunny. Words about Sunny. Words about Sunny. Words about Sunny. Words about
@@ -51,7 +51,7 @@ function About() {
           </div>
         </div>
         <div id="dylan">
-          <img src="https://picsum.photos/250" alt="" />
+          <img src="https://picsum.photos/300" alt="" />
         </div>
       </section>
     </>

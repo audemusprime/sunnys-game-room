@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { serviceGroupOne, serviceGroupTwo, serviceGroupThree } from '../data/services';
+import { moving, modification, serviceGroupThree } from '../data/services';
 import ServiceComponent from './ServiceComponent';
 import Arrow from './Arrow';
 import '../css/style.css';
@@ -36,12 +36,12 @@ function Services() {
       </div>
       <section className="services-row">
         <div className="serviceBox">
-          {serviceGroupOne.map((service) => (
+          {moving.map((service) => (
             <ServiceComponent group={service.group} name={service.name} cost={service.cost} />
           ))}
         </div>
         <div className="serviceBox">
-          {serviceGroupTwo.map((service) => (
+          {modification.map((service) => (
             <ServiceComponent group={service.group} name={service.name} cost={service.cost} />
           ))}
         </div>
@@ -52,6 +52,7 @@ function Services() {
         </div>
       </section>
       <div id="service-action">
+        <h2>All listed services are for 3 piece slate pool tables.</h2>
         <h3 id="subheader">We also buy and sell used pool tables!</h3>
         <button>Let's Do This!</button>
       </div>

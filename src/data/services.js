@@ -1,59 +1,60 @@
-export const serviceGroupOne = [
-  { group: 'title' },
+export const moving = [
+  { group: 'Pool Table Moving' },
   {
-    name: 'Sample',
-    cost: 100
+    name: '7ft Table',
+    cost: '350+'
   },
   {
-    name: 'Sample',
-    cost: 100
+    name: '8ft Table',
+    cost: '375+'
   },
   {
-    name: 'Sample',
-    cost: 100
+    name: '9ft Table',
+    cost: '425+'
   },
   {
-    name: 'Sample',
-    cost: 100
+    name: 'Stairs per Flight (size dependent)',
+    cost: '25 - 75'
   }
 ];
 
-export const serviceGroupTwo = [
-  { group: 'title' },
+export const modification = [
+  { group: 'Table Cloth & Refelting' },
   {
-    name: 'Sample',
-    cost: 100
+    name: 'Cloth Change**',
+    cost: '100+'
   },
   {
-    name: 'Sample',
-    cost: 100
+    name: 'Drop Pocket Table Refelting**',
+    cost: '275+'
   },
   {
-    name: 'Sample',
-    cost: 100
+    name: 'Ball Return Table Refelting**',
+    cost: '350+'
   },
-  {
-    name: 'Sample',
-    cost: 100
-  }
+  { name: '** Cloth sold seperately.' }
 ];
 
 export const serviceGroupThree = [
-  { group: 'title' },
+  { group: 'Additional Services' },
   {
-    name: 'Sample',
-    cost: 100
+    name: 'Table Breakdown',
+    cost: '175+'
   },
   {
-    name: 'Sample',
-    cost: 100
+    name: 'Table Set Up',
+    cost: '275+'
   },
   {
-    name: 'Sample',
-    cost: 100
+    name: 'Ball Return Addition',
+    cost: 50
   },
   {
-    name: 'Sample',
-    cost: 100
+    name: 'Bumper Replacement',
+    cost: 'Call for pricing'
   }
+  //   {
+  //     name: 'Sample',
+  //     cost: 100
+  //   }
 ];

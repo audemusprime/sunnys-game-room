@@ -25,7 +25,9 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="#contact">Get in touch</a>
+              <a href="#contact">
+                <button>Get in touch</button>
+              </a>
             </li>
           </ul>
         </nav>
