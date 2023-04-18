@@ -50,10 +50,16 @@ function Contact() {
         <h2 className="contact-header">Give us a call</h2>
         <div>
           <p>
-            <span className="call-name">Sunny</span> <span className="call-number">(###) ###-####</span>
+            <span className="call-name">Sunny</span>{' '}
+            <span className="call-number">
+              <a href="tel:4103757743">(410) 375-7743</a>
+            </span>
           </p>
           <p>
-            <span className="call-name">Dylan</span> <span className="call-number">(###) ###-####</span>
+            <span className="call-name">Dylan</span>{' '}
+            <span className="call-number">
+              <a href="tel:5715219226">(571) 521-9226</a>
+            </span>
           </p>
         </div>
       </div>

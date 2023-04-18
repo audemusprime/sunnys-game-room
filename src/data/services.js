@@ -53,8 +53,4 @@ export const serviceGroupThree = [
     name: 'Bumper Replacement',
     cost: 'Call for pricing'
   }
-  //   {
-  //     name: 'Sample',
-  //     cost: 100
-  //   }
 ];

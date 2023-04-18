@@ -60,7 +60,7 @@ function Testimonials() {
 
   return (
     <section className="page subpage testimonials" id="what-people-said" ref={ref}>
-      <div>
+      <div id="testimonial-header">
         <h2 className="subpage-header">What people said</h2>
       </div>
       <div className="image-carousel">

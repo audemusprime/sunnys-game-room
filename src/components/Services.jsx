@@ -54,7 +54,9 @@ function Services() {
       <div id="service-action">
         <h2>All listed services are for 3 piece slate pool tables.</h2>
         <h3 id="subheader">We also buy and sell used pool tables!</h3>
-        <button>Let's Do This!</button>
+        <button>
+          <a href="#contact">Let's Do This!</a>
+        </button>
         <div id="arrow">
           <Arrow link="#what-people-said">What People Said</Arrow>
         </div>
