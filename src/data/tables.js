@@ -68,14 +68,6 @@ export default [
     alt: 'Table 17'
   },
   {
-    image: 'assets/tables/table18.jpg',
-    alt: 'Table 18'
-  },
-  {
-    image: 'assets/tables/table19.jpg',
-    alt: 'Table 19'
-  },
-  {
     image: 'assets/tables/table20.jpg',
     alt: 'Table 20'
   },
