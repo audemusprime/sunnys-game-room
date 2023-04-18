@@ -329,6 +329,7 @@ svg {
   justify-items: center;
   align-items: center;
   font-size: 1rem;
+  position: relative;
 }
 
 #service-action h2 {
@@ -342,6 +343,12 @@ svg {
   font-size: clamp(1rem, 0.7rem + 5vw, 1.5rem);
   margin-top: -10rem;
   height: 3rem;
+}
+
+#service-action #arrow {
+  position: absolute;
+  bottom: 0;
+  align-self: center;
 }
 
 .contact {
