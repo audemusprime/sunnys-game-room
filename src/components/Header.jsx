@@ -6,7 +6,7 @@ function Header() {
       <header>
         <nav>
           <span className="header-title">
-            <a href="#">Sunny's Game Room</a>
+            <a href="#">Sunny's Gameroom</a>
           </span>
           <ul>
             <li>
