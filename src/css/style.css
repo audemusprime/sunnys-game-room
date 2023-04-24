@@ -24,6 +24,10 @@ body {
   color: var(--base-color);
 }
 
+section {
+  width: 100%;
+}
+
 a,
 a:active,
 a:visited {
@@ -62,6 +66,11 @@ button:active {
   background-color: var(--button-transition);
   cursor: pointer;
   /* transform: translateY(2px); */
+}
+
+.nav-trigger {
+  visibility: hidden;
+  display: none !important;
 }
 
 nav {
@@ -125,23 +134,19 @@ h2 {
 }
 
 .header-title {
-  justify-self: left;
+  /* justify-self: left; */
   padding-left: 4rem;
   font-family: 'Patua One', cursive;
   font-size: 1.9rem;
   letter-spacing: 0.2rem;
 }
 
-.page {
-  height: 100vh;
-}
-
 .subpage {
   padding-top: 5rem;
-  /* border-top: 2px solid black; */
 }
 
 #landing {
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -168,7 +173,7 @@ h2 {
 }
 
 #subheader {
-  font-size: clamp(1rem, 0.5rem + 5vw, 2rem);
+  font-size: clamp(0.5rem, 0.5rem + 3.5vw, 2rem);
   margin-bottom: 2rem;
 }
 
@@ -188,6 +193,10 @@ svg {
   height: 30px;
   display: block;
   margin: auto;
+}
+
+header svg {
+  font-size: 1.5rem;
 }
 
 #arrow {
@@ -291,6 +300,7 @@ svg {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .serviceBox {
@@ -336,6 +346,12 @@ svg {
   position: relative;
 }
 
+#service-action div {
+  display: inherit;
+  text-align: center;
+  line-height: 4rem;
+}
+
 #service-action h2 {
   font-size: clamp(0.7rem, 0.5rem + 5vw, 1rem);
   text-align: center;
@@ -343,9 +359,8 @@ svg {
 }
 
 #service-action button {
-  min-width: 300px;
+  min-width: 200px;
   font-size: clamp(1rem, 0.7rem + 5vw, 1.5rem);
-  margin-top: -10rem;
   height: 4rem;
 }
 
@@ -353,61 +368,50 @@ svg {
   color: var(--body-background);
 }
 
-#service-action #arrow {
+#service-action div div#arrow {
   position: absolute;
   bottom: 0;
-  align-self: center;
+  place-self: center;
+  line-height: 1.2rem;
 }
 
 .testimonials {
   display: grid;
   grid-template-rows: auto repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   align-items: center;
-  column-gap: 1rem;
-  row-gap: 1rem;
+  justify-content: center;
+  gap: 1rem;
   position: relative;
 }
 
 #testimonial-header {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .image-carousel {
-  grid-area: 2 / 1 / 3 / 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 592px;
-  margin-left: 1rem;
+  grid-area: 3 / 1 / 4 / 2;
   font-size: 0.85rem;
   line-height: 1.5rem;
-}
-
-.image-carousel img {
-  width: auto;
-  max-height: 500px;
+  margin-bottom: 10rem;
 }
 
 .review-carousel {
-  grid-area: 2 / 2 / 3 / 3;
-  margin-right: 1rem;
-  font-size: 0.9rem;
+  grid-area: 2 / 1 / 3 / 2;
+  font-size: 1rem;
   line-height: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #review-text {
   margin-bottom: 1rem;
+  text-align: justify;
+  width: 70%;
+  margin: 0 auto;
 }
 
 #review-name {
   font-size: 0.95rem;
   font-weight: 500;
-  font-style: italic;
 }
 
 .carousel .slide {
@@ -427,6 +431,7 @@ svg {
   position: absolute;
   bottom: 0;
   justify-self: center;
+  display: block;
 }
 
 .contact {
@@ -453,7 +458,7 @@ svg {
 
 input[id='contact'] {
   width: 100%;
-  min-width: 500px;
+  min-width: 200px;
   font-size: 1.2rem;
   display: block;
   margin-top: 1rem;
@@ -532,7 +537,7 @@ input[id='newsletter'] {
   font-size: 1.2rem;
   font-family: var(--body-font), sans-serif;
   padding: 0.5rem;
-  margin-right: 0.4rem;
+  margin-right: 1rem;
   border: 1px solid var(--base-color);
   border-radius: 5px;
   background-color: rgb(255, 255, 255, 0.6);
@@ -614,8 +619,78 @@ input[id='newsletter']:focus {
 }
 
 @media screen and (max-width: 40em) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    transform: translateY(-100vh);
+    transition: 1.5s all;
+  }
+
+  .nav-active {
+    height: 100vh;
+    background-color: rgb(235, 231, 233, 0.9);
+    backdrop-filter: blur(3px);
+    transform: translateY(0);
+  }
+
+  .nav-trigger {
+    display: block !important;
+    visibility: visible;
+    position: fixed;
+    top: 10;
+    right: 0;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    color: var(--body-background);
+    background-color: var(--header-accent);
+    border-radius: 4px;
+    font-weight: 500;
+    z-index: 1000;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    line-height: 10.5rem;
+    font-weight: 500;
+  }
+
+  .nav-links {
+    text-align: center;
+    transform: translateY(-100vh);
+    transition: 1.5s all;
+  }
+
+  .nav-links.active {
+    top: 0;
+    transform: translateY(0);
+  }
+
+  .header-title {
+    padding: 0.5rem;
+  }
+
+  nav.nav-active button {
+    width: 70vw;
+    height: fit-content;
+    font-size: 2rem;
+  }
+
+  #arrow,
+  #service-action div#arrow,
+  .testimonials #arrow {
+    display: none;
+  }
+
   #landing {
     display: grid;
+    justify-content: center;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
@@ -628,23 +703,29 @@ input[id='newsletter']:focus {
   #hero-text {
     z-index: 1;
     grid-area: 1 / 1 / 2 / 2;
-    justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--body-background);
+    padding: 0;
+    background-color: rgba(22, 21, 21, 0.3);
+  }
+
+  #hero-text h3 {
+    font-weight: 500;
   }
 
   #hero-title {
-    color: white;
+    color: var(--header-accent);
   }
 
   .about {
     grid-template-rows: auto repeat(4, 1fr);
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: 2rem;
   }
 
   #about-header {
     grid-area: 1 / 1 / 2 / 2;
+    margin-bottom: 3rem;
   }
 
   #sunny {
@@ -653,6 +734,9 @@ input[id='newsletter']:focus {
 
   #desc-a {
     grid-area: 3 / 1 / 4 / 2;
+    padding: 2rem;
+    text-align: justify;
+    line-height: 1.5rem;
   }
 
   #dylan {
@@ -662,6 +746,95 @@ input[id='newsletter']:focus {
   #desc-b {
     grid-area: 5 / 1 / 6 / 2;
     text-align: left;
+    padding: 2rem;
+    text-align: justify;
+    line-height: 1.5rem;
+  }
+
+  .services {
+    gap: 2rem;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .services-header {
+    display: inherit;
+    padding-bottom: 2rem;
+  }
+
+  .services-row {
+    grid-area: 2 / 1 / 3 / 2;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .serviceBox {
+    width: 65%;
+  }
+
+  #service-action {
+    grid-row: 3 / 4;
+    grid-template-rows: 100px 200px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  #service-action div {
+    text-align: center;
+    display: inherit;
+    justify-items: center;
+  }
+
+  #service-action button {
+    margin-top: 1rem;
+    width: 70vw;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .testimonials-header {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .carousel > button {
+    display: none;
+  }
+
+  .review-carousel {
+    max-width: 100vw;
+    justify-content: center;
+  }
+
+  .contact {
+    gap: 4rem;
+    grid-template-columns: 1fr;
+  }
+
+  #messageForm {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 70vw;
+  }
+
+  textarea {
+    min-width: 70vw;
+  }
+
+  #subscribe {
+    grid-area: 2 / 1 / 3 / 2;
     padding: 1rem;
+  }
+
+  #subscribe h3 {
+    padding: 2rem;
+  }
+
+  input[id='newsletter'] {
+    min-width: 60vw;
+  }
+
+  #call {
+    grid-area: 3 / 1 / 4 / 2;
   }
 }

@@ -26,7 +26,7 @@ function Contact() {
   }, [isIntersecting]);
 
   return (
-    <section className="page subpage contact" id="contact" ref={ref}>
+    <section className="subpage contact" id="contact" ref={ref}>
       <div id="messageForm">
         <h2 className="contact-header">Send us a message</h2>
         <div>

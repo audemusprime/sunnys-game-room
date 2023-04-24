@@ -3,7 +3,7 @@ import Arrow from './Arrow';
 
 function Landing() {
   return (
-    <section className="page" id="landing">
+    <section id="landing">
       <div id="hero-image"></div>
       <div id="hero-text">
         <h1 id="hero-title">Sunny's Gameroom</h1>

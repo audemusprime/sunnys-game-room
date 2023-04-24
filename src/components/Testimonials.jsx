@@ -59,59 +59,58 @@ function Testimonials() {
   };
 
   return (
-    <section className="page subpage testimonials" id="what-people-said" ref={ref}>
+    <section className="subpage testimonials" id="what-people-said" ref={ref}>
       <div id="testimonial-header">
-        <h2 className="subpage-header">What people said</h2>
-      </div>
-      <div className="image-carousel">
-        <Carousel
-          autoPlay={true}
-          infiniteLoop={true}
-          interval={5000}
-          // showArrows={false}
-          showThumbs={false}
-          showStatus={false}
-          renderArrowPrev={(onClickHandler, hasPrev) =>
-            hasPrev && (
-              <button onClick={onClickHandler} style={{ ...arrowStyles, left: -0.2 }}>
-                ◀︎
-              </button>
-            )
-          }
-          renderArrowNext={(onClickHandler, hasNext) =>
-            hasNext && (
-              <button onClick={onClickHandler} style={{ ...arrowStyles, right: -0.2 }}>
-                ▶︎
-              </button>
-            )
-          }>
-          {tableImages}
-        </Carousel>
+        <h2 className="subpage-header testimonials-header">What people said</h2>
       </div>
       <div className="review-carousel">
-        <h2 id="contact-header">Reviews</h2>
         <Carousel
           showArrows={true}
           autoPlay={true}
           infiniteLoop={true}
-          interval={6000}
+          interval={9000}
           showStatus={false}
           showIndicators={false}
           renderArrowPrev={(onClickHandler, hasPrev) =>
             hasPrev && (
-              <button onClick={onClickHandler} style={{ ...arrowStyles, left: 5 }}>
+              <button onClick={onClickHandler} style={{ ...arrowStyles, left: 100 }}>
                 ◀︎
               </button>
             )
           }
           renderArrowNext={(onClickHandler, hasNext) =>
             hasNext && (
-              <button onClick={onClickHandler} style={{ ...arrowStyles, right: 5 }}>
+              <button onClick={onClickHandler} style={{ ...arrowStyles, right: 100 }}>
                 ▶︎
               </button>
             )
           }>
           {reviewData}
+        </Carousel>
+      </div>
+      <div className="image-carousel">
+        <Carousel
+          autoPlay={true}
+          infiniteLoop={true}
+          interval={7000}
+          // showArrows={false}
+          showThumbs={false}
+          showStatus={false}
+          renderArrowPrev={(onClickHandler, hasPrev) =>
+            hasPrev && (
+              <button onClick={onClickHandler} style={{ ...arrowStyles, left: 100 }}>
+                ◀︎
+              </button>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext) =>
+            hasNext && (
+              <button onClick={onClickHandler} style={{ ...arrowStyles, right: 100 }}>
+                ▶︎
+              </button>
+            )
+          }>
+          {tableImages}
         </Carousel>
       </div>
       <div id="arrow">

@@ -32,7 +32,7 @@ function About() {
 
   return (
     <>
-      <section className="page subpage about" id="who-we-are" ref={ref}>
+      <section className="subpage about" id="who-we-are" ref={ref}>
         <div id="about-header">
           <h2 className="subpage-header">Who we are</h2>
         </div>
@@ -41,11 +41,16 @@ function About() {
         </div>
         <div id="desc-a">
           Words about Sunny. Words about Sunny. Words about Sunny. Words about Sunny. Words about Sunny. Words about
-          Sunny. Words about Sunny. Words about Sunny.
+          Sunny. Words about Sunny. Words about Sunny. Words about Sunny. Words about Sunny. Words about Sunny. Words
+          about Sunny. Words about Sunny. Words about Sunny. Words about Sunny. Words about Sunny. Words about Sunny.
+          Words about Sunny. Words about Sunny.
         </div>
         <div id="desc-b">
           Words about Dylan. Words about Dylan. Words about Dylan. Words about Dylan. Words about Dylan. Words about
-          Dylan. Words about Dylan. Words about Dylan.
+          Dylan. Words about Dylan. Words about Dylan. Words about Dylan. Words about Dylan. Words about Dylan. Words
+          about Dylan. Words about Dylan. Words about Dylan. Words about Dylan. Words about Dylan.Words about Dylan.
+          Words about Dylan. Words about Dylan. Words about Dylan. Words about Dylan. Words about Dylan. Words about
+          Dylan. Words about Dylan.
           <div id="arrow">
             <Arrow link="#what-we-do">What We Do</Arrow>
           </div>

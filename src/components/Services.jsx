@@ -30,9 +30,9 @@ function Services() {
   }, [isIntersecting]);
 
   return (
-    <section className="page subpage services" id="what-we-do" ref={ref}>
+    <section className="subpage services" id="what-we-do" ref={ref}>
       <div>
-        <h2 className="subpage-header">What we do</h2>
+        <h2 className="subpage-header services-header">What we do</h2>
       </div>
       <section className="services-row">
         <div className="serviceBox">
@@ -53,12 +53,14 @@ function Services() {
       </section>
       <div id="service-action">
         <h2>All listed services are for 3 piece slate pool tables.</h2>
-        <h3 id="subheader">We also buy and sell used pool tables!</h3>
-        <button>
-          <a href="#contact">Let's Do This!</a>
-        </button>
-        <div id="arrow">
-          <Arrow link="#what-people-said">What People Said</Arrow>
+        <div>
+          <h3 id="subheader">We also buy and sell used pool tables!</h3>
+          <button>
+            <a href="#contact">Let's Do This!</a>
+          </button>
+          <div id="arrow">
+            <Arrow link="#what-people-said">What People Said</Arrow>
+          </div>
         </div>
       </div>
     </section>
