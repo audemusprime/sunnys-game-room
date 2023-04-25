@@ -83,6 +83,8 @@ nav {
   z-index: 999;
   font-size: 1.2rem;
   height: 5rem;
+  background: linear-gradient(#ebe7df, 2rem, rgb(235, 231, 223, 0));
+  filter: drop-shadow(0 2rem 20px rgb(235, 231, 223, 1));
 }
 
 nav a {
@@ -628,6 +630,7 @@ input[id='newsletter']:focus {
     font-size: 2rem;
     transform: translateY(-100vh);
     transition: 1.5s all;
+    filter: none;
   }
 
   .nav-active {
